@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff" >
+    <!-- 头部 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FF7900" > 
+        <!-- 指向箭头 -->
+        <ImageView
+            android:id="@+id/notspeechscret_back_arrow" 
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:paddingLeft="3dp"
+            android:paddingStart="3dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:src="@drawable/stadium_left_arrow"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true" />
+        <!-- 主界面的标题 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:text="@string/notspeechsecrect"
+			android:textSize="@dimen/text_twenty_five_size"
+			android:textColor="@color/white"
+            android:layout_centerInParent="true"/> 
+    </RelativeLayout>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文章列表:"
+        android:textSize="@dimen/text_twenty_size"
+        android:textColor="@color/orangle_low"
+        android:layout_marginBottom="5dp"/>
+
+    <com.wqp.view.XListView
+        android:id="@+id/notspeechscret_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:cacheColorHint="#00000000"/> 
+
+</LinearLayout>
+

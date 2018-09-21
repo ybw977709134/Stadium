@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#E4E3E1</color>
+    <!-- 灰黑色 -->
+    <color name="gray_black">#6B6B6B</color>
+    <!-- 橙色 浅 -->
+    <color name="orangle_low">#FEA937</color>
+    
+    <!-- 深蓝色 -->
+    <color name="large_blue">#05A9F1</color>
+    
+    <!-- 绿色 -->
+    <color name="green">#63A440</color>
+    
+    <!-- 红色 -->
+    <color name="red">#ff0000</color>
+    
+    <color name="standard">#FB7600</color>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</resources>

@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDCDA"
+    android:orientation="vertical" >
+
+    <!-- 背景图片加底部一排透明文字 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_200" >
+
+        <!-- 背景图片 -->
+
+        <ImageView
+            android:id="@+id/specify_VenuesImager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/description" />
+        <!-- 场馆名称 透明文字 -->
+
+        <TextView
+            android:id="@+id/specify_VenuesName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:text="什刹海体校网球馆"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sixteen_size" />
+    </FrameLayout>
+    
+    <View android:layout_width="match_parent" android:layout_height="5dp"/>
+    
+    <Button android:id="@+id/order" android:layout_width="match_parent" android:layout_height="40dp" android:background="#FF7900" android:text="@string/order" android:textColor="@color/white"/>
+
+    <!-- 基本信息 -->
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:paddingRight="0.0dp"
+        android:paddingEnd="0.0dp" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/base_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:text="@string/base_information"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <!-- 场馆所在区域 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/invalid_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/area" />
+
+        <TextView
+            android:id="@+id/specify_VenuesArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/invalid_icon"
+            android:paddingLeft="5dp" 
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:text="@string/stadium_area"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 详细地址 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/invalid_iconn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/location_icon" />
+
+        <TextView
+            android:id="@+id/specify_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/invalid_iconn"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:text="西城区西大街57号"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 预定电话 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/invalid_ico"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/telephone_orange" />
+
+        <TextView
+            android:id="@+id/specify_ReservePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/invalid_ico"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:autoLink="phone"
+            android:text="027-87882873"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 场馆邮箱 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/invalid_icoo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/email" />
+
+        <TextView
+            android:id="@+id/specify_VenuesEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/invalid_icoo"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:autoLink="email"
+            android:text="场馆邮箱"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 乘车路线 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/invalid_icov"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/rideroute" />
+
+        <TextView
+            android:id="@+id/specify_RideRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_toRightOf="@+id/invalid_icov"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="乘车路线(带有百度地图链接))"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+	
+    <!-- 地图链接 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/invalid_icovwww"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/map_link" />
+
+        <TextView
+            android:id="@+id/specify_Map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/invalid_icovwww"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:autoLink="web"
+            android:text="地图链接"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+	</RelativeLayout>
+	
+    <!-- 场馆介绍 部分,属于标题 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:paddingRight="0.0dp"
+        android:paddingEnd="0.0dp" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/diamonds_four" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:text="@string/stadium_instr"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 场馆的占地面积，场地面积，建筑面积，净空高度,水温，水深 -->
+
+    <include layout="@layout/specify_project_details" />
+
+    <!-- 地面材料-->
+
+    <TextView
+        android:id="@+id/specify_GroundMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="地面材料"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 内部设施 -->
+
+    <TextView
+        android:id="@+id/specify_InternalFacilities"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="内部设施"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 投资金额 -->
+
+    <TextView
+        android:id="@+id/specify_Investment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="投资金额5万"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 运营性质  -->
+
+    <TextView
+        android:id="@+id/specify_VenuesType"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="独资"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+    
+    <!-- 所属环境 -->
+
+    <TextView
+        android:id="@+id/specify_VenuesEnvironment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="机关院内"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 场馆负责人 -->
+
+    <TextView
+        android:id="@+id/specify_ResponsiblePeople"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="涂巳龙"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <!-- 场馆联系人 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+    
+    <TextView
+        android:id="@+id/specify_Contact"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="涂巳龙"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 联系电话  -->
+
+    <TextView
+        android:id="@+id/specify_ContactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:autoLink="phone"
+        android:text="63899988-6009"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" /> 
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+    
+    <!-- 主管部门 -->
+    <TextView
+        android:id="@+id/specify_DirectorDept"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="丰台体育局"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 场馆简介 -->
+
+    <TextView
+        android:id="@+id/specify_Briefing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp" 
+        android:gravity="center_vertical"
+        android:text="冠京饭店位于丰北路甲79号华堂商场地下一层，内有台球11张，斯诺克1张，乒乓球室3间，棋牌室13间。"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+
+    <!-- 建成时间 -->
+
+    <TextView
+        android:id="@+id/specify_BuiltTime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="2001-09-10"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+    <!-- 投入使用时间 -->
+
+    <TextView
+        android:id="@+id/specify_UseTime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="2001-09-10"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+    <!-- 场馆坐席数量 -->
+
+    <TextView
+        android:id="@+id/specify_SeatNumber"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="1"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+    <!-- 每日平均客流量 -->
+
+    <TextView
+        android:id="@+id/specify_AvgNumber"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:text="1"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BFB8B2" />
+    <!-- 是否推荐 -->
+
+    <TextView
+        android:id="@+id/specify_WhetherRecomm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" 
+        android:gravity="center_vertical"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <!-- 温馨提醒 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" 
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+        android:gravity="center_vertical"
+        android:text="以上价格不包括免费或优惠时段，具体价格以预订时显示为准"
+        android:textColor="#303030"
+        android:textSize="@dimen/text_sixteen_size" />
+
+    <!-- 用户评价 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/invalid_icco"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/user_assess_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/invalid_icco"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:text="@string/user_assess"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0DFDD" 
+        android:layout_marginBottom="3dp"/> 
+
+</LinearLayout>

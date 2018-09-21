@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:paddingTop="80dp"
+    android:paddingBottom="90dp" 
+    android:background="@drawable/navigation_five5"  >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp" >
+        <!-- 微博登录 --> 
+            <ImageView
+                android:visibility="gone" 
+                android:id="@+id/navigation_five_weibo"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/navigation_five_one"
+                android:scaleType="centerInside"/> 
+        
+        <!-- 间隔 -->
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        
+        <!-- QQ登录 --> 
+            <ImageView 
+                android:visibility="gone" 
+                android:id="@+id/navigation_five_qq"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/navigation_five_two"
+                android:scaleType="centerInside"/> 
+        
+        <!-- 间隔 -->
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        
+        <!-- 邮箱/场馆汇帐号登录 --> 
+            <ImageView
+                android:id="@+id/navigation_five_email" 
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/navigation_five_three"
+                android:scaleType="centerInside"/> 
+        
+        <!-- 间隔 -->
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        
+        <!-- 注册新用户 --> 
+            <ImageView
+                android:id="@+id/navigation_five_register" 
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/navigation_five_four"
+                android:scaleType="centerInside"/> 
+    </LinearLayout>
+    
+    <!-- 随便看看去 -->
+    <ImageView
+        android:id="@+id/navigation_five_random_look"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+		android:src="@drawable/nav_random_look"
+        android:layout_alignParentBottom="true" 
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

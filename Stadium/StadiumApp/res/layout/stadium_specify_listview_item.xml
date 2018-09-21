@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 头像 -->
+		
+        <ImageView
+            android:id="@+id/stadium_specify_listview_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_test" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <!-- 姓名  -->
+
+            <TextView
+                android:id="@+id/stadium_specify_listview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="不亦乐乎"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_sixteen_size" />
+
+            <!-- 评论时间 和 星级评论 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- 评论时间 --> 
+
+                <TextView
+                    android:id="@+id/stadium_specify_listview_spacetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="2014年12月25日 8:25"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen_size" />
+				<!--  
+                <RatingBar
+                    android:id="@+id/stadium_specify_listview_grade"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="5" /> 
+				
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/stadium_specify_listview_grade"
+                    android:text="星级评论："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_sixteen_size" />
+                  -->
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 消息内容 -->
+
+    <TextView
+        android:id="@+id/stadium_specify_listview_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="好好好，非常好！"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_sixteen_size"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"  />
+
+</LinearLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 头部 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:background="#FF7900"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 该部分暂时处于隐藏状态 --> 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <!-- 返回箭头 -->
+
+            <ImageView
+                android:id="@+id/home_location_arrow"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_arrow_white" />
+            <!-- 返回 -->
+
+            <TextView
+                android:id="@+id/home_location_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+        <!-- 设置 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_twenty_five_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDEDED"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 个人设置标题 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/personal_setting"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twenty_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_border_style"
+                android:orientation="vertical" >
+
+                <!-- 背景图片头像部分 -->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_size_230" >
+
+                    <!-- 背景图片 -->
+
+                    <ImageView
+                        android:id="@+id/setting_personal_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_size_230"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_test" />
+
+                    <!-- 这一部分是隐藏掉了 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <!-- 设置头像 -->
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.3"
+                                android:text="设置头像"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_eighteen_size" />
+                            <!-- 设置封面 -->
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.3"
+                                android:text="设置封面 "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_eighteen_size" />
+                        </LinearLayout>
+                        <!-- 我的场馆汇卡片 -->
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:text="我的场馆汇卡片"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_eighteen_size" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_border_style"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#BFBBB8" />
+                
+                <!-- 详细信息 -->
+
+                <TextView
+                    android:id="@+id/setting_specify_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_size_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="详细信息"
+                    android:textColor="@color/gray_black"
+                    android:textSize="@dimen/text_eighteen_size"
+                    android:background="@drawable/item_entry_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#BFBBB8" />
+
+                <!-- 资料更新 -->
+
+                <TextView
+                    android:id="@+id/setting_data_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_size_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="资料更新"
+                    android:textColor="@color/gray_black"
+                    android:textSize="@dimen/text_eighteen_size"
+                    android:background="@drawable/item_entry_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#BFBBB8" />
+
+                <!-- 意见反馈 -->
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/setting_tick_suggesting"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_size_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="意见反馈 "
+                    android:textColor="@color/gray_black"
+                    android:textSize="@dimen/text_eighteen_size"
+                    android:background="@drawable/item_entry_bg" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#BFBBB8" /> 
+
+                <!-- 关于我们 -->
+
+                <TextView
+                    android:id="@+id/setting_aboutus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_size_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="关于我们"
+                    android:textColor="@color/gray_black"
+                    android:textSize="@dimen/text_eighteen_size"
+                    android:background="@drawable/item_entry_bg" />
+            </LinearLayout>
+
+            <!-- 注销按钮 -->
+
+            <Button
+                android:id="@+id/setting_nullify"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/setting_cancel_button_style"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_twenty_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

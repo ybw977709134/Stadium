@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    <!-- 头部 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FF7900" > 
+        <!-- 指向箭头 -->
+        <ImageView
+            android:id="@+id/condition_query_back_arrow" 
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:paddingLeft="3dp"
+            android:paddingStart="3dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:src="@drawable/stadium_left_arrow"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true" />
+        <!-- 主界面的标题 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:text="@string/condition_query"
+			android:textSize="@dimen/text_twenty_five_size"
+			android:textColor="@color/white"
+            android:layout_centerInParent="true"/> 
+    </RelativeLayout>
+    
+    <LinearLayout android:id="@+id/condition_page" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">  
+    <!-- 运动类型提示 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/height_size_40" android:orientation="horizontal">
+    	<TextView android:layout_width="wrap_content" android:layout_height="@dimen/height_size_40" android:text="运动类型:" android:textSize="@dimen/text_sixteen_size" android:textColor="@color/black" android:gravity="center_vertical"/>
+    	<TextView android:id="@+id/condition_sporttype" android:layout_width="match_parent" android:layout_height="@dimen/height_size_40" android:textSize="@dimen/text_sixteen_size" android:textColor="@color/black" />  
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/height_size_40" android:orientation="horizontal" >
+	    <TextView android:layout_width="wrap_content" android:layout_height="@dimen/height_size_40" android:text="选择区域:" android:textSize="@dimen/text_sixteen_size" android:textColor="@color/black" android:gravity="center_vertical"/>  
+	    <EditText android:id="@+id/condition_area" android:layout_width="match_parent" android:layout_height="@dimen/height_size_40" android:hint="点击选择场馆" android:gravity="center_vertical"/>
+	</LinearLayout>
+    
+    <!-- 选择时间 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+     	<TextView android:layout_width="wrap_content" android:layout_height="@dimen/height_size_40" android:text="开始时间:" android:textSize="@dimen/text_sixteen_size" android:textColor="@color/black" android:gravity="center_vertical"/>   
+        <EditText android:id="@+id/condition_time" android:layout_width="match_parent" android:layout_height="@dimen/height_size_40" android:hint="点击选择时间" android:gravity="center_vertical"/> 
+    </LinearLayout> 
+    
+    <!-- 查询按钮 -->
+    <Button
+       android:id="@+id/condition_query" android:layout_width="match_parent" android:layout_height="60dp"  android:layout_marginBottom="30dp"
+       android:layout_marginLeft="5dp"  android:layout_marginRight="5dp" android:layout_marginTop="30dp"  android:text="查询"  android:textColor="@color/white"
+       android:textSize="@dimen/text_twenty_size" android:background="@drawable/setting_cancel_button_style"/>
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/condition_listview" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+        <!-- 显示按条件查询出的结果列表 -->
+        <ListView android:id="@+id/show_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" />
+        
+        <!-- 提交按钮 
+        <Button android:id="@+id/condition_submit" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="10dp" 
+            android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="10dp"
+            android:background="@drawable/setting_cancel_button_style" android:text="提交" android:textColor="@color/white"
+            android:textSize="@dimen/text_twenty_size"/>
+        -->
+    </LinearLayout>
+
+</LinearLayout>

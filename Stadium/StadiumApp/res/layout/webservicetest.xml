@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <!-- 方法AddReservation --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="AddReservation"
+        android:textColor="#FA7500"
+        android:textSize="16sp"
+        android:onClick="AddReservation" />
+
+    <!-- 方法AddUser --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="AddUser"
+        android:textColor="#FA7500"
+        android:textSize="16sp"
+        android:onClick="AddUser" />
+
+    <!-- 方法GetAUser --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="GetAUser"
+        android:textColor="#FA7500"
+        android:textSize="16sp"
+        android:onClick="GetAUser" />
+    
+    <!-- 方法GetArtInfo --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="GetArtInfo"
+        android:textColor="#FA7500"
+        android:textSize="16sp"
+        android:onClick="GetArtInfo" />
+
+    <!-- 方法GetComment --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="GetComment"
+        android:textColor="#FA7500"
+        android:textSize="16sp"
+        android:onClick="GetComment" />
+
+    <!-- 方法GetGuide --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="GetGuide"
+        android:textColor="#FA7500"
+        android:textSize="16sp" 
+        android:onClick="GetGuide"/>
+
+    <!-- 方法GetSports --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="GetSports"
+        android:textColor="#FA7500"
+        android:textSize="16sp"
+        android:onClick="GetSports" />
+
+    <!-- 方法GetVenues --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="GetVenues"
+        android:textColor="#FA7500"
+        android:textSize="16sp"
+        android:onClick="GetVenues" />
+    
+    <!-- 方法JoinAct --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="JoinAct"
+        android:textColor="#FA7500"
+        android:textSize="16sp" 
+        android:onClick="JoinAct"/>
+    
+    <!-- 方法Login --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="Login"
+        android:textColor="#FA7500"
+        android:textSize="16sp" 
+        android:onClick="Login"/>
+    
+    <!-- 方法Upload --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="Upload "
+        android:textColor="#FA7500"
+        android:textSize="16sp" 
+        android:onClick="Upload" />
+    
+    <!-- 方法UserUpdate --> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="UserUpdate "
+        android:textColor="#FA7500"
+        android:textSize="16sp" 
+        android:onClick="UserUpdate"/>
+</LinearLayout>
+</ScrollView>

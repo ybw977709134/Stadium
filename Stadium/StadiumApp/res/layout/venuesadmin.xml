@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff" >
+    
+    <!-- 头部 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FF7900" > 
+        <!-- 指向箭头 -->
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/venuesadmin_back_arrow" 
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:paddingLeft="3dp"
+            android:paddingStart="3.0dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:src="@drawable/stadium_left_arrow"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true" />
+        <!-- 主界面的标题 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:text="@string/venues_admin"
+			android:textSize="@dimen/text_twenty_five_size"
+			android:textColor="@color/white"
+            android:layout_centerInParent="true"/> 
+    </RelativeLayout>
+    
+    <ListView android:id="@+id/venuesadmin_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000"/>
+ 
+</LinearLayout>

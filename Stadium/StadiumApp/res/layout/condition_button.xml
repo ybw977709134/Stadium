@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <View android:layout_width="match_parent" android:layout_height="10dp"/>
+    <Button
+    android:id="@+id/condition_submit" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginBottom="10dp" 
+    android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="20dp"
+    android:background="@drawable/setting_cancel_button_style" android:text="提交" android:textColor="@color/white"
+    android:textSize="@dimen/text_twenty_size" /> 
+    <View android:layout_width="match_parent" android:layout_height="10dp"/>
+</LinearLayout>

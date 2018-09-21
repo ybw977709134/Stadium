@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/register_user_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 头部 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:background="#FF7900"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <!-- 指向箭头 -->
+
+            <ImageView
+                android:id="@+id/register_new_user_back_arrow"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingLeft="3dp"
+           		android:paddingRight="0.0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/stadium_left_arrow" />
+            <!-- 主界面的标题 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_twenty_five_size" />
+        </RelativeLayout>
+
+        <!-- 间隔 -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:alpha="0.0" />
+
+        <!-- 用户输入部分 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp" 
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="0.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="用 户 名:"
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size" />
+            <!-- 新帐户 -->
+
+            <EditText
+                android:id="@+id/register_new_user_account"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/orange_line"
+                android:hint="您的邮箱" 
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+        </LinearLayout> 
+
+        <!-- 新密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="0.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="密        码:"
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size" />
+
+            <EditText
+                android:id="@+id/register_new_user_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/orange_line"
+                android:hint="新密码"
+                android:singleLine="true"
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_eighteen_size"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <!-- 姓名 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="0.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="姓        名:"
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size" />
+
+            <EditText
+                android:id="@+id/register_new_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/orange_line"
+                android:hint="真实姓名"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+        <!-- 昵称 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="0.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="昵        称 :"
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size" />
+
+            <EditText
+                android:id="@+id/register_new_user_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/orange_line"
+                android:hint="昵称"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout> 
+
+        <!-- 年龄段 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="0.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="年 	    龄 :"
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size" />
+
+            <EditText
+                android:id="@+id/register_new_user_age"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/orange_line"
+                android:hint="年龄"
+                android:singleLine="true"
+                android:inputType="number"
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+       <!-- 手机号码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="0.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="手机号码 :"
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size" />
+
+            <EditText
+                android:id="@+id/register_new_user_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/orange_line"
+                android:hint="手机号码"
+                android:inputType="phone"
+                android:singleLine="true" 
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="0.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="性          别:"
+                android:textColor="#FF7900"
+                android:textSize="@dimen/text_eighteen_size" />
+
+            <RadioGroup
+                android:id="@+id/register_new_user_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/register_new_user_sex_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="   女"
+                    android:textColor="#FF7900"
+                    android:textSize="@dimen/text_eighteen_size"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/register_new_user_sex_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:text="   男"
+                    android:textColor="#FF7900"
+                    android:textSize="@dimen/text_eighteen_size" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 间隔 -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:alpha="0.0" />
+
+        <!-- 注册按钮 -->
+
+        <Button
+            android:id="@+id/register_new_user_operation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_twenty_size"
+            android:background="@drawable/setting_cancel_button_style" />
+    </LinearLayout>
+
+</ScrollView>

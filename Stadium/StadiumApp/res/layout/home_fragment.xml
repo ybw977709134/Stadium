@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/home_fragment_ids" >
+
+    <!-- 场馆导航 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_stadium_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:background="#C0B8AD" >
+    </android.support.v4.view.ViewPager>
+    <!-- 每页对应的小圆点图标 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#C1B9AE"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/home_stadium_navigation_icon_one"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dot_white" />
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/home_stadium_navigation_icon_two"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dot_white" />
+    </LinearLayout>
+
+    <!-- 应战与约战 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal" >
+
+        <!-- 约战 -->
+
+        <ImageView
+            android:id="@+id/home_friend_domain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yuezhan"
+            android:gravity="center"   />
+        <!-- 应战 -->
+
+        <ImageView
+            android:id="@+id/home_adopt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yingzhan"
+            android:gravity="center"  />
+    </LinearLayout>
+
+    <!-- 第5部分 其他功能 -->
+    <!-- 设置了距顶部的边距marginTop -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="8dp"
+        android:orientation="horizontal" >
+
+        <!-- 不能说的秘密 -->
+
+        <LinearLayout
+            android:id="@+id/home_notsaysecret"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical|center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_five_two" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 内容的标题部分 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="不能说的秘密"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_sixteen_size" />
+                <!-- 内容部分 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看运动知识及小技巧"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_ten_size" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 右边部分 -->
+
+
+        <!-- 爆料空间 -->
+
+        <LinearLayout
+            android:id="@+id/home_brokespace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical|center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp" >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_five_three" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 内容的标题部分 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="爆料空间"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_sixteen_size" />
+                <!-- 内容部分 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="了解最新场馆新闻动态"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_ten_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 热门推荐 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="8dp"
+        android:text="热门推荐"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_sixteen_size" />
+
+</LinearLayout>

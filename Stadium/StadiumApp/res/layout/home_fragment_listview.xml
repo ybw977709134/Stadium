@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff" >
+    
+    <!-- 页面的头部 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FF7900" >
+        <!-- 定位 ,默认显示为 所在地-->
+        <TextView
+            android:id="@+id/home_location_address" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_eighteen_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/> 
+        
+        <!-- 主界面的标题 -->
+        <!-- -->
+        <ImageView 
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+			android:background="@drawable/logo_name_logo"
+			android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/description"/>
+         
+        <!-- 右边用户登录图标 -->
+        <ImageView
+            android:id="@+id/home_register_login"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/home_user_login"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" /> 
+    </RelativeLayout>
+    
+    <com.wqp.view.XListView
+        android:id="@+id/home_hotrecommend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:fadingEdge="none" 
+        android:cacheColorHint="#00000000"/>
+
+</LinearLayout>

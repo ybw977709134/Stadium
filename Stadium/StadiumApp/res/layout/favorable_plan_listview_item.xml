@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/white"
+    android:padding="8dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <!-- 图片部分 -->
+
+        <ImageView
+            android:id="@+id/favorable_plan_listview_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/billiards" 
+            android:contentDescription="billiards"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <!-- 标题 -->
+
+            <TextView
+                android:id="@+id/favorable_plan_listview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周六H8台球活动"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twelve_size" 
+                android:layout_marginBottom="10dp"/>
+			<!-- 发起人 -->
+           	<LinearLayout 
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="wrap_content"
+           	    android:orientation="horizontal">
+           	     <TextView 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="发起人："
+	                android:textColor="@color/black"
+	                android:textSize="@dimen/text_twelve_size" />
+           	      <TextView
+	                android:id="@+id/favorable_plan_listview_initiator"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="单身情歌"
+	                android:textColor="@color/black"
+	                android:textSize="@dimen/text_twelve_size" />
+           	</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 活动时间-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动时间："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_twelve_size" />
+
+        <TextView
+            android:id="@+id/favorable_plan_listview_plantime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2014-12-12至-2014-12-29"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_twelve_size" />
+    </LinearLayout>
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <!-- 活动地址 --> 
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true" > 
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="活动地址:"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_twelve_size" /> 
+	        <TextView
+	            android:id="@+id/favorable_plan_listview_planaddress"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="H8台球"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_twelve_size" />
+	    </LinearLayout>  
+	    
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:gravity="center_vertical">
+	        <ImageView
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+	            android:src="@drawable/praise"
+	            android:scaleType="centerCrop" />
+	        <!-- 点赞数量 -->
+	        <TextView 
+	            android:id="@+id/favorable_plan_listview_praise"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="20"
+	            android:textColor="#5F5F5F"
+	            android:textSize="@dimen/text_fourteen_size" />
+	        
+	        <View
+	            android:layout_width="30dp"
+	            android:layout_height="wrap_content" />
+	        
+	        <ImageView
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+	            android:src="@drawable/message"
+	            android:scaleType="centerCrop" />
+	        <!-- 消息数量 -->
+	        <TextView 
+	            android:id="@+id/favorable_plan_listview_message"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="20"
+	            android:textColor="#5F5F5F"
+	            android:textSize="@dimen/text_fourteen_size"/>
+	    </LinearLayout>
+    </RelativeLayout>
+    
+</LinearLayout>

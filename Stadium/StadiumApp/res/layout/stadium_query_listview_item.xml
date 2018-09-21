@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:padding="8dp"
+    android:background="@drawable/public_border_style"  >
+    <!-- 图片部分 -->
+    <ImageView
+        android:id="@+id/stadium_query_listview_image"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:src="@drawable/test_picture"
+        android:scaleType="centerCrop" />
+    <!-- 图片右边的内容部分 -->
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@+id/stadium_query_listview_image" >
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/stadium_query_listview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="什刹海体校网球馆"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_fourteen_size" />
+		<!-- 地址 -->  
+		    <TextView
+		        android:id="@+id/stadium_query_listview_address"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="地址:西城区数码大街58号"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_ten_size" />  
+		
+		<!-- 电话 --> 
+		    <TextView
+		        android:id="@+id/stadium_query_listview_telephone"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="电话:027-87239876"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_ten_size" />  
+		
+		<!-- 乘车路线 --> 
+		    <TextView
+		        android:id="@+id/stadium_query_listview_route"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="乘车路线:乘车公交 510路、823路、788路、903路、208路、19路至北海门下车即到"
+	            android:textColor="@color/black"
+	            android:textSize="8dp" />  
+		
+        <!-- 所属环境 --> 
+	        <TextView
+	            android:id="@+id/stadium_query_listview_environment"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="所属环境:机关院内"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_ten_size" /> 
+    </LinearLayout> 
+    
+</RelativeLayout>

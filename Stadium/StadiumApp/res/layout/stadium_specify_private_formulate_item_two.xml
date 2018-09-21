@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+    
+    <!-- 头像 -->
+    <ImageView 
+        android:id="@+id/specify_private_formulate_image_two"
+        android:layout_width="match_parent"
+        android:layout_height="130dp" 
+        android:src="@drawable/test_picture"
+        android:scaleType="centerCrop"/>
+    <!-- 姓名，查看详情 -->
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp" >
+        <!-- 姓名 -->
+	    <TextView
+	        android:id="@+id/specify_private_formulate_name_two"
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:layout_marginLeft="5dp"
+	        android:gravity="center_vertical"
+	        android:text="徐如意"
+	        android:textSize="@dimen/text_sixteen_size"
+	        android:textColor="@color/orangle_low"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true" />
+	    <!-- 查看详情 -->
+	    <ImageView 
+	        android:id="@+id/specify_private_formulate_specify_two"
+	        android:layout_width="70dp"
+	        android:layout_height="30dp"
+	        android:layout_marginRight="5dp"
+	        android:src="@drawable/look_specify_arrow"
+	        android:scaleType="centerInside"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"/>
+        
+    </RelativeLayout>
+    
+    <!-- 从业时间 -->
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="5dp"
+	        android:text="从业时间："
+	        android:textSize="@dimen/text_fourteen_size"
+	        android:textColor="@color/black" />
+        <TextView 
+            android:id="@+id/specify_private_formulate_sparetime_two"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="0"
+	        android:textSize="@dimen/text_fourteen_size"
+	        android:textColor="@color/black" />
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="年"
+	        android:textSize="@dimen/text_fourteen_size"
+	        android:textColor="@color/black" /> 
+    </LinearLayout>
+    
+    <!-- 运动项目 -->
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="5dp"
+	        android:text="运动项目 ："
+	        android:textSize="@dimen/text_fourteen_size"
+	        android:textColor="@color/black" />
+        <TextView 
+            android:id="@+id/specify_private_formulate_sportevent_two"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="足球、篮球、拓展训练、田径"
+	        android:textSize="@dimen/text_fourteen_size"
+	        android:textColor="@color/black" /> 
+    </LinearLayout>  
+
+</LinearLayout>

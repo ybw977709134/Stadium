@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 头部 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:background="#FF7900"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 指向箭头 -->
+
+        <ImageView
+            android:id="@+id/brokethespace_details_back_arrow"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stadium_left_arrow" />
+        <!-- 主界面的标题 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/notspeechsecrect_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_twenty_five_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <!-- 新闻标题 -->
+
+            <TextView
+                android:id="@+id/broke_the_space_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="新闻标题"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twenty_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <!-- 时间 -->
+
+                <TextView
+                    android:id="@+id/broke_the_space_details_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="时间"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twenty_size" />
+
+                <!-- 点击量 -->
+
+                <TextView
+                    android:id="@+id/broke_the_space_details_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="点击量"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twenty_size" />
+            </LinearLayout>
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line"/>
+
+            <!-- 新闻主体内容 -->
+
+            <TextView
+                android:id="@+id/broke_the_space_details_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="新闻主体内容"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twenty_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

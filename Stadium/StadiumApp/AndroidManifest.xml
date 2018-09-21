@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wqp.stadiumapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+        
+        
+    <!-- 进行网络定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 进行GPS定位 -->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<!-- 用于访问wifi网络信息 ,wifi信息会用于网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<!-- 获取运营商信息，用于支持提供运营商相关的信息 -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<!-- 获取wifi权限，wifi信息会用来进行网络定位 -->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<!-- 获取当前手机状态 -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<!-- 向扩展卡写入数据，用于写入离线定位数据 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- 访问网络的权限 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<!-- 从扩展卡读取数据权限(sd卡),用户写入的离线定位数据 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<!-- 允许用户读取低级别的系统日志文件 -->
+	<uses-permission android:name="android.permission.READ_LOGS"/>   
+	<!-- 获取手机振动权限 --> 
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<!-- 获取手机唤醒权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	
+	
+    <application
+        android:name="com.wqp.stadiumapp.AppApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/launch"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" 
+        android:windowSoftInputMode="stateUnspecified|adjustPan">
+        
+        <!-- 为第三方插件百度地图进行配置  -->
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"></service>
+        <!-- meta-data需要写在application中 -->
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="GEzDDxGR4fwDF2aUlzwAG94w"/>
+         
+        
+        <activity
+            android:name="com.wqp.navigate.Navigate"
+            android:label="@string/app_name" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 为第三方插件QQ登录帐号登录验证进行配置 -->
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+            android:screenOrientation="portrait"/>
+		<!-- 腾讯登录验证 -->
+        <activity
+	        android:name="com.tencent.tauth.AuthActivity"
+	        android:noHistory="true"
+	        android:launchMode="singleTask" > 
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent222222" />
+            </intent-filter>
+        </activity>
+        
+        
+        <!-- 支付宝支付 -->
+        <activity 
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"  > 
+        </activity>
+        <activity 
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"> 
+        </activity>
+        
+        
+        <!-- 本应用的Activity -->
+        <activity android:name="com.wqp.stadiumapp.MainActivity" ></activity><!-- 进入应用后的主界面 -->
+        <activity android:name="com.wqp.stadiumapp.StadiumNews"></activity><!-- 场馆新闻页面 -->
+        <activity android:name="com.wqp.stadiumapp.PrivateFormulate"></activity><!-- 私定制页面 -->
+        <activity android:name="com.wqp.stadiumapp.StadiumSpecify"></activity><!-- 场馆详情 -->
+        <activity android:name="com.wqp.baidu.BaiduLocationActivity"></activity><!-- 百度定位的页面 --> 
+        <activity android:name="com.wqp.baidu.BaiduMapLocation"></activity><!-- 百度地图定位的页面 -->
+        <activity android:name="com.wqp.stadiumapp.InvitationWar"></activity><!-- 约战 -->
+        <activity android:name="com.wqp.stadiumapp.Login" android:theme="@style/Theme.myTheme"></activity> <!--   登录页面 -->      
+        <activity android:name="com.wqp.stadiumapp.AboutUs"></activity><!-- 关于我们页面 -->
+        <activity android:name="com.wqp.stadiumapp.WebServiceTest"></activity><!-- WebService测试页面 -->
+        <activity android:name="com.wqp.stadiumapp.RegisterNewUser"></activity><!-- 新用户注册页面 -->
+        <activity android:name="com.wqp.stadiumapp.UserUpdate"></activity><!-- 更新用户信息界面 -->
+        <activity android:name="com.wqp.stadiumapp.BrokeTheSpace"></activity><!-- 爆料空间界面 -->
+        <activity android:name="com.wqp.stadiumapp.NotSpeechSecret"></activity><!-- 不能说的秘密界面 -->
+        <activity android:name="com.wqp.stadiumapp.UserDetails"></activity><!-- 个人中心页面的详细信息 -->
+        <activity android:name="com.wqp.stadiumapp.NotSpeechScrectDetails"></activity><!-- 不能说的秘密页面详情 -->
+        <activity android:name="com.wqp.stadiumapp.BrokeTheSpaceDetails"></activity><!-- 爆料空间页面详情 -->
+        <activity android:name="com.wqp.stadiumapp.JoinActDetails"></activity><!-- 加入应战页面详情 -->
+        <activity android:name="com.wqp.stadiumapp.FriendRecommendType"></activity><!-- 用户点击了主界面导航栏时某一项时进入查询 -->
+        <activity android:name="com.wqp.stadiumapp.MainFriendApply"></activity><!-- 点击主界面时会直接进入到约战这个界面 -->
+        <activity android:name="com.wqp.stadiumapp.MainFriendRecommend"></activity><!-- 点击主界面时会直接进入到应战这个界面 -->
+        <activity android:name="com.wqp.stadiumapp.StadiumOrder"></activity><!-- 点击场馆详情页面上的预约按钮会进入到这个界面进行场馆预约操作 -->      
+        <activity android:name="com.wqp.stadiumapp.MyOrder"></activity><!-- 我的预约页面 -->
+        <activity android:name="com.wqp.stadiumapp.OrderTicket"></activity><!-- 预约券页面 -->
+        <activity android:name="com.wqp.stadiumapp.ConditionQueryPage"></activity><!-- 点击首页上的篮球、足球等图标直接会跳转到此页面 -->
+        <activity android:name="com.wqp.stadiumapp.VenuesAdmin"></activity><!-- 场馆管理员登录的界面 -->
+        <activity android:name="com.wqp.stadiumapp.UserMessageProcess"></activity><!-- 用户接收到通知后显示的界面 -->
+ 		
+ 		
+ 		<service android:name="com.wqp.stadiumapp.service.UserService" >
+ 		    <intent-filter>
+ 		        <action android:name="com.wqp.stadiumapp.UserService"/>
+ 		    </intent-filter>
+ 		</service><!-- 用户监听场馆回复服务 -->
+ 		
+ 		<service android:name="com.wqp.stadiumapp.service.AdminService">
+ 		    <intent-filter >
+ 		        <action android:name="com.wqp.stadiumapp.AdminService"/>
+ 		    </intent-filter>
+ 		</service><!-- 场馆监听用户回复服务  -->
+        
+    </application> 
+
+</manifest>

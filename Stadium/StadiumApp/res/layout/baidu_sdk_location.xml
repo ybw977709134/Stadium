@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 定位模式设置 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="定位模式 和 坐标系设置"/>
+    <!-- 定位模式 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定位模式"
+            	android:textSize="28sp"
+                android:layout_gravity="center_horizontal"/>
+	        <RadioGroup 
+	            android:id="@+id/baidu_location_mode"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical">
+	            <!-- 高精度 -->
+	            <RadioButton
+	                android:id="@+id/baidu_location_mode_hight" 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="高精度" />
+	            <RadioButton
+	                android:id="@+id/baidu_location_mode_low" 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="低功耗" />
+	            <RadioButton
+	                android:id="@+id/baidu_location_mode_device" 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="仅设备" />
+	        </RadioGroup>
+        </LinearLayout>
+        
+        <!-- 坐标系 -->
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"> 
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="坐标系"
+            	android:textSize="28sp"
+                android:layout_gravity="center_horizontal"/>
+	        <RadioGroup 
+	            android:id="@+id/baidu_coordinate_mode"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"> 
+	            <RadioButton
+	                android:id="@+id/baidu_coordinate_mode_gcj02" 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="gcj02(国测局)" />
+	            <RadioButton
+	                android:id="@+id/baidu_coordinate_mode_bd09ll" 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="bd09ll(百度加密经纬度)" />
+	            <RadioButton
+	                android:id="@+id/baidu_coordinate_mode_bd09" 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="bd09(百度加密墨卡托)" />
+	        </RadioGroup>
+        </LinearLayout> 
+    </LinearLayout>
+    
+    <!-- 定位时间间隔 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位时间间隔(ms):"
+            android:textSize="28sp"/>
+        <EditText
+            android:id="@+id/baidu_location_frequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="1000"
+			android:singleLine="true"
+			android:inputType="number" /> 
+    </LinearLayout>
+	<CheckBox 
+	    android:id="@+id/baidu_geographic_code_mode"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="是否需要反地理编码"
+        android:textSize="28sp"
+        android:checked="true"/>
+	<Button 
+	    android:id="@+id/baidu_location_toggle"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/startlocation"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginBottom="5dp"/>
+	
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+	    <TextView 
+		    android:id="@+id/baidu_location_information"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:textSize="20sp"/>
+	</ScrollView>
+	
+</LinearLayout>

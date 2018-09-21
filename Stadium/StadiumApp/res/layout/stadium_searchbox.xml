@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingLeft="5dp"  >
+    <!-- 查询 -->
+    <Button
+        android:id="@+id/stadium_searchbox_button" 
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="查询"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_twelve_size"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:background="#FF7900"
+        android:layout_alignParentRight="true" />
+    <EditText 
+        android:id="@+id/stadium_searchbox_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:layout_centerVertical="true"
+        android:background="@drawable/invalid_bg_style"
+        android:layout_toLeftOf="@+id/stadium_searchbox_button"
+        android:hint="@string/stadium_name"
+        android:drawableLeft="@drawable/friendship_search"/>
+    
+
+</RelativeLayout>

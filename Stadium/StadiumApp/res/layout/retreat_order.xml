@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EDEDEB" > 
+     <!-- 头部 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FF7900" > 
+        <!-- 指向箭头 -->
+        <ImageView
+            android:id="@+id/retreat_back_arrow" 
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:paddingLeft="3dp"
+            android:paddingStart="3dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:src="@drawable/stadium_left_arrow"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true" />
+        <!-- 主界面的标题 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:text="@string/retreat_order"
+			android:textSize="@dimen/text_twenty_five_size"
+			android:textColor="@color/white"
+            android:layout_centerInParent="true"/>   
+    </RelativeLayout>
+    
+    <View  android:layout_width="match_parent" android:layout_height="2dp"/> 
+    
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"> 
+    
+    <!-- 开户银行 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" 
+            android:gravity="end|center_vertical"
+            android:paddingEnd="0.0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingStart="5dp"
+            android:text="开户银行:"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+
+        <EditText
+            android:id="@+id/retreat_open_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" 
+            android:gravity="center_vertical"
+            android:paddingEnd="0.0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingStart="5dp" 
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </LinearLayout>
+    
+    <View android:layout_width="match_parent" android:layout_height="10dp" />
+    
+    <!-- 帐号 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" 
+            android:gravity="end|center_vertical"
+            android:paddingEnd="0.0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingStart="5dp"
+            android:text="帐号:"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+
+        <EditText
+            android:id="@+id/retreat_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" 
+            android:gravity="center_vertical"
+            android:paddingEnd="0.0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingStart="5dp" 
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </LinearLayout>
+    
+    <View android:layout_width="match_parent" android:layout_height="10dp" />
+    
+    <!-- 户名 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" 
+            android:gravity="end|center_vertical"
+            android:paddingEnd="0.0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingStart="5dp"
+            android:text="户名:"
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+
+        <EditText
+            android:id="@+id/retreat_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" 
+            android:gravity="center_vertical"
+            android:paddingEnd="0.0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0.0dp"
+            android:paddingStart="5dp" 
+            android:textColor="#303030"
+            android:textSize="@dimen/text_sixteen_size" />
+    </LinearLayout>
+    
+    <View android:layout_width="match_parent" android:layout_height="10dp" /> 
+        
+    <!-- 确认按钮 -->
+
+    <Button
+        android:id="@+id/verify"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/setting_cancel_button_style"
+        android:text="确		认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_twenty_size" />
+        
+          </LinearLayout> 
+    </ScrollView>  
+    
+
+</LinearLayout>

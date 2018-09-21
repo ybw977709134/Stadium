@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/register_user_bg" >
+    <!-- 头部 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FF7900" > 
+        <!-- 指向箭头 -->
+        <ImageView
+            android:id="@+id/user_update_back_arrow" 
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:paddingLeft="3dp"
+        	android:paddingStart="3dp"
+        	android:paddingRight="0dp"
+        	android:paddingEnd="0dp"
+            android:src="@drawable/stadium_left_arrow"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null" />
+        <!-- 主界面的标题 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:text="@string/user_update"
+			android:textSize="@dimen/text_twenty_five_size"
+			android:textColor="@color/white"
+            android:layout_centerInParent="true"/> 
+    </RelativeLayout>
+    
+    <!-- 间隔 -->
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:alpha="0.0"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_password"
+            android:textColor="#FA7700"
+            android:textSize="@dimen/text_eighteen_size"
+            android:layout_marginRight="5dp" />
+        <!-- 新密码  -->   
+        <EditText
+            android:id="@+id/user_update_new_mima" 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="@dimen/text_eighteen_size"
+            android:textColor="#FA7700" 
+            android:hint="@string/new_password_hint"
+            android:singleLine="true"
+            android:inputType="numberPassword"
+            android:background="@drawable/orange_line" />
+          
+    </LinearLayout> 
+    
+    <!-- 用户输入部分 --> 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_nickname"
+            android:textColor="#FA7700"
+            android:textSize="@dimen/text_eighteen_size"
+            android:layout_marginRight="5dp" />
+        <!-- 新昵称  -->   
+        <EditText
+            android:id="@+id/user_update_new_nickname" 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="@dimen/text_eighteen_size"
+            android:textColor="#FA7700" 
+            android:hint="@string/new_nickname_hint"
+            android:singleLine="true"
+            android:inputType="text"
+            android:background="@drawable/orange_line" />
+          
+    </LinearLayout> 
+    
+    <!-- 新年龄段-->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_age_segment"
+            android:textColor="#FA7700"
+            android:textSize="@dimen/text_eighteen_size"
+            android:layout_marginRight="5dp" />
+
+        <EditText 
+            android:id="@+id/user_update_new_age" 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="@dimen/text_eighteen_size"
+            android:textColor="#FA7700" 
+            android:hint="@string/new_age_segment_hint"
+            android:singleLine="true"
+            android:inputType="text"
+            android:background="@drawable/orange_line"/> 
+            
+    </LinearLayout> 
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性      别:"
+            android:textColor="#FA7700"
+            android:textSize="@dimen/text_eighteen_size"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical" />
+        <RadioGroup 
+        android:id="@+id/user_update_new_sex_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton 
+            android:id="@+id/user_update_new_sex_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 女"
+            android:textColor="#FA7700"
+            android:textSize="@dimen/text_eighteen_size"
+            android:layout_weight="1"
+            android:checked="true" 
+            android:layout_marginLeft="20dp"/>
+        <RadioButton 
+            android:id="@+id/user_update_new_sex_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 男"
+            android:textColor="#FA7700"
+            android:textSize="@dimen/text_eighteen_size"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:enabled="true"/> 
+    </RadioGroup>
+        
+    </LinearLayout>
+    
+    <!-- 间隔 -->
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:alpha="0.0"/> 
+
+    <!-- 更新资料按钮 -->
+    <Button
+        android:id="@+id/user_update_new_operation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"  
+        android:text="@string/update_data"
+        android:textSize="@dimen/text_twenty_size"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/setting_cancel_button_style"  />
+
+</LinearLayout>
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF" > 
+    <!-- 昵称 -->
+    <TextView
+        android:id="@+id/private_formulate_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="姓名（昵称）:徐如意"
+        android:textSize="@dimen/text_eighteen_size"
+        android:textColor="@color/orangle_low" 
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" 
+        android:gravity="center_vertical"
+        android:singleLine="true"/>
+    
+    <!-- 性别 -->
+    <TextView
+        android:id="@+id/private_formulate_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="性别:男"
+        android:textSize="@dimen/text_eighteen_size"
+        android:textColor="@color/orangle_low"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" 
+        android:gravity="center_vertical"
+        android:singleLine="true" />
+    
+    <!-- 专家类型-->
+    <TextView
+        android:id="@+id/private_formulate_zhuanjiatype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="专家类型:"
+        android:textSize="@dimen/text_eighteen_size"
+        android:textColor="@color/orangle_low"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" 
+        android:gravity="center_vertical"
+        android:singleLine="true" />
+    
+    <!-- 所属运动场馆-->
+    <TextView
+        android:id="@+id/private_formulate_venuestype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="所属运动场馆:"
+        android:textSize="@dimen/text_eighteen_size"
+        android:textColor="@color/orangle_low"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" 
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:ellipsize="end" />
+    
+    <!-- 运动项目-->
+    <TextView
+        android:id="@+id/private_formulate_hobby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="运动项目"
+        android:textSize="@dimen/text_eighteen_size"
+        android:textColor="@color/orangle_low"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" 
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"  />
+
+</LinearLayout>

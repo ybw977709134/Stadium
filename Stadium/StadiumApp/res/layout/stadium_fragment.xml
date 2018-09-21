@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B2B2B0"
+    android:orientation="vertical"
+    android:id="@+id/id_stadium_fragment" >
+
+    <!-- 内容部分 -->
+
+    <FrameLayout
+        android:id="@+id/stadium_query_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="8dp">
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <!-- 发起活动 --> 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:orientation="horizontal" >
+
+            <!-- 运动类型 --> 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="运动类型:"
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700" />
+
+            <Spinner
+                android:id="@+id/friend_apply_sporttype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:orientation="horizontal" >
+
+            <!-- 活动标题 --> 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="活动标题:" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/>
+
+            <EditText
+                android:id="@+id/friend_apply_acttitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:singleLine="true"  />
+        </LinearLayout>
+      
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:orientation="horizontal" >
+
+            <!-- 举办场馆 --> 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="举办场馆:"
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700" />
+
+            <EditText
+                android:id="@+id/friend_apply_venuesname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:inputType="text"
+                android:singleLine="true"/>
+        </LinearLayout>
+       
+        <!-- 注释部分 -->
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="*注:如果无场馆可供选择,请在表单中自行填写场馆名称"
+		    android:textColor="@color/red"
+		    android:textSize="@dimen/text_sixteen_size"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp" />
+		
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:orientation="horizontal" >
+        <!-- 费用支出 --> 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="费用支出:"
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700" />
+		<Spinner
+                android:id="@+id/friend_apply_venuescost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"  /> 
+        </LinearLayout>
+      
+        <!-- 注释部分 -->
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="*注:如果选择其它方式,请在活动描述中说明"
+		    android:textColor="@color/red"
+		    android:textSize="@dimen/text_sixteen_size"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:orientation="horizontal" >
+        <!-- 报名截止时间 --> 
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="报名截止时间:"
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_twenty_size" />
+
+            <EditText
+                android:id="@+id/friend_apply_applyendtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" 
+                android:layout_weight="3"
+                android:inputType="date|text"
+                android:singleLine="true" />
+            <!-- 日历 -->
+            <com.wqp.view.DateTimeImageView
+                android:id="@+id/friend_apply_applyendtime_calculator" 
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/calculator_image"
+                android:layout_gravity="center_vertical"  />
+        </LinearLayout>
+        
+        <!-- 注释部分 -->
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="*注:报名截止日期不能大于开始日期"
+		    android:textColor="@color/red"
+		    android:textSize="@dimen/text_sixteen_size"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp" />  
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:orientation="horizontal" >
+        <!-- 开始时间 --> 
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="开始时间:"
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_twenty_size" />
+
+            <EditText
+                android:id="@+id/friend_apply_starttime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" 
+                android:layout_weight="3"
+                android:inputType="date|text"
+                android:singleLine="true" />
+            <!-- 日历 -->
+            <com.wqp.view.DateTimeImageView
+                android:id="@+id/friend_apply_starttime_calculator" 
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/calculator_image"
+                android:layout_gravity="center_vertical"  />   
+        </LinearLayout>
+        
+        
+        <!-- 注释部分 -->
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="*注:活动开始时间必须大于报名截止时间小于活动结束时间"
+		    android:textColor="@color/red"
+		    android:textSize="@dimen/text_sixteen_size"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp" />  
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:orientation="horizontal" >
+            
+        <!-- 截止时间 --> 
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="截止时间:"
+                android:textColor="#FA7700"
+                android:textSize="@dimen/text_twenty_size" />
+
+            <EditText
+                android:id="@+id/friend_apply_endtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" 
+                android:layout_weight="3"
+                android:inputType="date|text"
+                android:singleLine="true" />
+            <!-- 日历 -->
+            <com.wqp.view.DateTimeImageView
+                android:id="@+id/friend_apply_endtime_calculator" 
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/calculator_image"
+                android:layout_gravity="center_vertical"  />   
+        </LinearLayout>     
+        
+        <!-- 注释部分 -->
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="*注:活动时间不能小于活动开始时间"
+		    android:textColor="@color/red"
+		    android:textSize="@dimen/text_sixteen_size"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp" />   
+		    
+		<!-- 参与活动人数上限 -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/height_size_60"
+		    android:orientation="horizontal">
+            <!-- 人数上限 -->
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="人数上限:" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/>
+
+            <EditText
+                android:id="@+id/friend_apply_takecount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true" />
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text=" 人" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/> 
+		</LinearLayout>
+        
+        <!-- 注释部分 -->
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="*注:请输入合法数字,这里是人数上限"
+		    android:textColor="@color/red"
+		    android:textSize="@dimen/text_sixteen_size"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp" />     
+        
+       	<!-- 裁判员 -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/height_size_60"
+		    android:orientation="horizontal">
+            <!-- 裁判员  -->
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="裁 判  员 :" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/>
+
+            <EditText
+                android:id="@+id/friend_apply_refereecount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true" />
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text=" 人" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/> 
+		</LinearLayout> 
+		
+		<!-- 指导员 -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/height_size_60"
+		    android:orientation="horizontal">
+            <!-- 指导员  -->
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="指 导  员 :" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/>
+
+            <EditText
+                android:id="@+id/friend_apply_guidecount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true" />
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text=" 人" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/> 
+		</LinearLayout>
+		
+		<!-- 活动具体内容  -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+            <!-- 具体内容  -->
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="具体内容:" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/>
+
+            <EditText
+                android:id="@+id/friend_apply_actcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" /> 
+		</LinearLayout>
+		
+		
+		<!-- 活动公告  -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+            <!-- 活动公告  -->
+		    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="活动公告:" 
+                android:textSize="@dimen/text_twenty_size"
+                android:textColor="#FA7700"/>
+
+            <EditText
+                android:id="@+id/friend_apply_actnotice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" /> 
+		</LinearLayout>
+        
+		<!-- 确定 -->
+		<Button 
+		    android:id="@+id/friend_apply_confirm"
+	    	android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:text="@string/confirm"
+	        android:textSize="@dimen/text_twenty_size"
+	        android:textColor="@color/white"
+	        android:layout_marginTop="30dp"
+	        android:layout_marginBottom="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+	        android:background="@drawable/setting_cancel_button_style" /> 
+    </LinearLayout>
+
+</ScrollView>

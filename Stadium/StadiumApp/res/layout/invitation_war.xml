@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDDCDA" >
+    <!-- 头部 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FF7900" > 
+        <!-- 指向箭头 -->
+        <ImageView
+            android:id="@+id/invitation_war_back_arrow" 
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:paddingLeft="3dp"
+            android:paddingStart="3dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:src="@drawable/stadium_left_arrow"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true" />
+        <!-- 主界面的标题 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:text="@string/domain_invitation_war"
+			android:textSize="@dimen/text_twenty_five_size"
+			android:textColor="@color/white"
+            android:layout_centerInParent="true"/>   
+    </RelativeLayout>
+    
+    <!-- 搜索框部分 ,此功能暂进隐藏掉-->
+    <!-- 
+    <include layout="@layout/friendship_searchbox"/>
+     -->
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/friend_replay_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/friend_replay"
+            android:textColor="#383838"
+            android:textSize="@dimen/text_eighteen_size" />
+
+        <TextView
+            android:id="@+id/friend_recommend_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/friend_recommend"
+            android:textColor="#383838"
+            android:textSize="@dimen/text_eighteen_size" /> 
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/cursor_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/cursor_image"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp" />
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/invitation_war_viewpager" 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"> 
+    </android.support.v4.view.ViewPager> 
+    
+	
+</LinearLayout>
+
+
+

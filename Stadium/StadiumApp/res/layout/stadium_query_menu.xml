@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white" >
+
+    <!-- 头部 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_size_60"
+        android:orientation="horizontal" >
+
+        <!-- 头部 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_size_60"
+            android:background="#FF7900"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <!-- 目录图标 -->
+
+            <ImageView
+                android:id="@+id/stadium_query_menu_index"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="3dp"
+                android:paddingStart="3dp"
+            	android:paddingRight="0.0dp"
+            	android:paddingEnd="0.0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stadium_query_index" />
+            <!-- 主界面的标题 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/stadium_query"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_twenty_five_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <!-- 头像 -->
+
+            <ImageView
+                android:id="@+id/stadium_query_menu_user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/user_test" />
+            <!-- 帐号 -->
+
+            <TextView
+                android:id="@+id/stadium_query_menu_user_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/stadium_query_menu_user_image"
+                android:text=""
+                android:textColor="#3C3C3A"
+                android:textSize="@dimen/text_sixteen_size" />
+            <!-- 设置 -->
+
+            <ImageView
+                android:id="@+id/stadium_query_menu_setting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/stadium_query_setting_style" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7B7B5" />
+
+        <!-- 场馆查询 -->
+
+        <LinearLayout
+            android:id="@+id/slide_menu_stadiumquery"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/public_border_style" >
+
+            <!-- 图标 -->
+
+            <ImageView
+                android:id="@+id/slide_menu_stadiumquery_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stadium_query_query_style" />
+            <!-- 文字 -->
+
+            <TextView
+                android:id="@+id/slide_menu_stadiumquery_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+            	android:paddingRight="0.0dp"
+            	android:paddingEnd="0.0dp"
+                android:text="@string/stadium_query"
+                android:textColor="#4C4C4B"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7B7B5" />
+
+        <!-- 私人定制 -->
+
+        <LinearLayout
+            android:id="@+id/slide_menu_privateformulate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/public_border_style" >
+
+            <!-- 图标 -->
+
+            <ImageView
+                android:id="@+id/slide_menu_privateformulate_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stadium_query_personl_style" />
+            <!-- 文字 -->
+
+            <TextView
+                android:id="@+id/slide_menu_privateformulate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+            	android:paddingRight="0.0dp"
+            	android:paddingEnd="0.0dp"
+                android:text="@string/private_formulate"
+                android:textColor="#4C4C4B"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7B7B5" />
+
+        <!-- 地盘约战 -->
+
+        <LinearLayout
+            android:id="@+id/slide_menu_domainwar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/public_border_style" >
+
+            <!-- 图标 -->
+
+            <ImageView
+                android:id="@+id/slide_menu_domainwar_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stadium_query_war_style" />
+            <!-- 文字 -->
+
+            <TextView
+                android:id="@+id/slide_menu_domainwar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+            	android:paddingRight="0.0dp"
+            	android:paddingEnd="0.0dp"
+                android:text="地盘约战"
+                android:textColor="#4C4C4B"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7B7B5" />
+
+        <!-- 优惠活动 ,该功能暂时取消-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/slide_menu_favorableplan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/public_border_style" >
+
+            <!-- 图标 -->
+
+            <ImageView
+                android:id="@+id/slide_menu_favorableplan_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stadium_query_plan_style" />
+            <!-- 文字 -->
+
+            <TextView
+                android:id="@+id/slide_menu_favorableplan_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+            	android:paddingRight="0.0dp"
+            	android:paddingEnd="0.0dp"
+                android:text="@string/favorable_plan"
+                android:textColor="#4C4C4B"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7B7B5" />
+
+        <!-- 场馆新闻 -->
+
+        <LinearLayout
+            android:id="@+id/slide_menu_stadiumnews"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="0.0dp"
+            android:paddingEnd="0.0dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/public_border_style" >
+
+            <!-- 图标 -->
+
+            <ImageView
+                android:id="@+id/slide_menu_stadiumnews_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/stadium_query_news_style" />
+            <!-- 文字 -->
+
+            <TextView
+                android:id="@+id/slide_menu_stadiumnews_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+            	android:paddingRight="0.0dp"
+            	android:paddingEnd="0.0dp"
+                android:text="@string/stadium_news"
+                android:textColor="#4C4C4B"
+                android:textSize="@dimen/text_eighteen_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7B7B5" />
+    </LinearLayout>
+
+</LinearLayout>

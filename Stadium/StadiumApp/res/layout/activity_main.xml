@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/main_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FF7900" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 首页按钮 -->
+
+        <ImageView
+            android:id="@+id/main_home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_normal" 
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- 场馆查询按钮 -->
+
+        <ImageView
+            android:id="@+id/main_stadium"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stadium_normal"
+            android:layout_centerInParent="true" />
+
+        <!-- 个人中心按钮 -->
+
+        <ImageView
+            android:id="@+id/main_personalcenter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/personal_normal"
+			android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

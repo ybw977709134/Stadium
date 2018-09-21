@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_size_60"
+    android:orientation="horizontal"
+    android:background="@drawable/public_border_style" 
+    android:layout_marginBottom="8dp"  >
+    
+    <!-- 标题 -->
+    <TextView 
+        android:id="@+id/brokethespace_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_twenty_size"
+        android:textColor="@color/gray_black"
+        android:singleLine="true"
+        android:layout_marginRight="20dp" />
+    
+    <!-- 内容 ,可以结尾省略 -->
+	<TextView 
+	    android:id="@+id/brokethespace_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_twenty_size"
+        android:textColor="@color/gray_black"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_size_200" >
+    <!-- 背景图片加底部一排透明文字 --> 
+        <!-- 背景图片 -->
+        <ImageView 
+            android:id="@+id/stadium_news_image" 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/test_picture"
+            android:scaleType="centerCrop"/>
+        <!-- 透明文字 -->
+        <TextView
+            android:id="@+id/stadium_news_text" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+			android:text="2014全民键身运动绿道骑游周活动开始"
+			android:textSize="@dimen/text_sixteen_size"
+			android:textColor="@color/white"
+			android:layout_gravity="bottom"
+			android:gravity="center_horizontal"
+			android:layout_marginBottom="5dp" />  
+
+</FrameLayout>
